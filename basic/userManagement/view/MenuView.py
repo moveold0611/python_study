@@ -2,6 +2,7 @@ class MenuView:
     
     @staticmethod
     def index():
+        from basic.userManagement.view.UserView import UserView
         print('[사용자 관리 프로그램]')
         print('1. 사용자 전체 조회')
         print('2. username으로 검색')
@@ -14,16 +15,15 @@ class MenuView:
         if select == 'q':
             return False
         elif select == '1':
-            pass
+            UserView.getAllUserList()
         elif select == '2':
-            pass
+            UserView.selecter()
         elif select == '3':
-            from basic.userManagement.view.RegisterUserView import RegisterUserView
-            RegisterUserView.register()
+            UserView.register()
         elif select == '4':
-            pass
+            UserView.updater()
         elif select == '5':
-            pass
+            UserView.deleter()
         else:
             print('선택하신 번호는 등록되지 않은 메뉴입니다.')
 
