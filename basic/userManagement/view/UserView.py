@@ -67,8 +67,6 @@ class UserView:
             return
         index = df.index[df["userId"] == int(userId)].values[0]
         user = UserView.showUpdateMenu(rs.body[index])
-        print(user)
-
 
         response = UserController.updateUserByUserId(User(
             userId=userId,
@@ -167,7 +165,7 @@ class UserView:
             return
         password = input('삭제할 password 입력하세요 >>> ')
         if selectedUser.get('password') != password:
-            print("아이디가 일치하지 않습니다.")
+            print("비밀번호가 일치하지 않습니다.")
             return
         response = UserController.deleteUserByUserId(userId)
         

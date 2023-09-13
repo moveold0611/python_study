@@ -63,14 +63,13 @@ class UserRepository:
             update 
                 user_tb
             set
-                username = %s,
                 password = %s,
                 name = %s,
                 email = %s
             where 
                 user_id = %s ;
             """
-            updateCount = cursor.execute(sql, (user.username, user.password, user.name, user.email, user.userId))
+            updateCount = cursor.execute(sql, (user.password, user.name, user.email, user.userId))
             connection.commit()
             return updateCount
         except Exception as e:
