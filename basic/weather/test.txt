@@ -1,0 +1,25 @@
+empty_date = []
+data_date = []
+for date in busan["일시"]:
+    for temp_date in temp_busan:
+        if temp_date in date:
+            empty_date.append(date.split(" ")[0])
+            data_date.append(date)
+
+empty_date = set(empty_date)
+print(empty_date)
+print(data_date)
+
+full_date = []
+for date in empty_date:
+    for h in range(24):
+        full_date.append(date + f" {str(h).zfill(2)}:00")
+
+print(full_date)
+
+full_empty_date = []
+for date in full_date:
+    if date not in data_date:
+        full_empty_date.append(date)
+
+print(full_empty_date)
