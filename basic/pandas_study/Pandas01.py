@@ -11,6 +11,7 @@ b = pd.Series(a)
 print(b)
 print("=" * 200)
 
+
 a1 = np.array(["a","b","c"])
 b1 = pd.Series(a1)
 print(b1)
@@ -56,3 +57,5 @@ print(b5.min(axis=1))
 print(b5.max)
 print(b5.mean)
 print(b5.std(), b5.var()) # 표준편차, 분산
+
+
