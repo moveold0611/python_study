@@ -71,7 +71,6 @@ plt.ylabel("와이축 이름")
 plt.show()
 
 #8 원형 그래프
-
 figure = plt.figure()
 axes = figure.add_subplot(111)
 label = ['축구', '농구', '야구', '배구']
